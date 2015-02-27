@@ -1,76 +1,17 @@
------------------------------------------------------------------------------------------
-MetaSyllabus is an attempt to supplement the work of Roger Grosse and Colorado Reed, 
-the creators of Metacademy:
+MetaSyllabus is an attempt to supplement the work of Roger Grosse and Colorado Reed, the creators of Metacademy:
 
-    "We have all sorts of information at our fingertips. Facts, restaurant reviews, 
-    birthdays—anything that can be explained in less than five minutes. This doesn’t
-    just make us more efficient. It changes how we think. When you’re reading a news 
-    article on a country you’ve never heard of, you think, “I can look that up!” 
-    When you see a mysterious item on a restaurant menu, you think, “I can look that up!” 
-    If you’re a programmer and you encounter some cryptic error message, no fear—
-    you can look it up!
+    "We have all sorts of information at our fingertips. Facts, restaurant reviews, birthdays—anything that can be explained in less than five minutes. This doesn’t just make us more efficient. It changes how we think. When you’re reading a news article on a country you’ve never heard of, you think, “I can look that up!” When you see a mysterious item on a restaurant menu, you think, “I can look that up!” If you’re a programmer and you encounter some cryptic error message, no fear—you can look it up!
 
-    But there are some things you can’t just look up. What are the economic 
-    effects of quantitative easing? What exactly did the Large Hadron Collider find?
-    What can we learn from genomic studies of autism? What stops someone from stealing 
-    everyone’s Bitcoins? All of these things require a deep level of understanding even 
-    to make sense of the question. Unless you’re an expert in the subject area, or you 
-    have the time and discipline to embark on a major self-education program, you’ll 
-    probably have to settle for a superficial understanding.
+    But there are some things you can’t just look up. What are the economic effects of quantitative easing? What exactly did the Large Hadron Collider find? What can we learn from genomic studies of autism? What stops someone from stealing everyone’s Bitcoins? All of these things require a deep level of understanding even to make sense of the question. Unless you’re an expert in the subject area, or you have the time and discipline to embark on a major self-education program, you’ll probably have to settle for a superficial understanding.
 
-    We envision a future where whenever you hear about the LHC, autism, Bitcoin, or 
-    any of the other complexities of the modern world, you will think,
-    “I can learn that!” We think a world where deep understanding is at your fingertips 
-    will be less confusing, more interesting, and blessed with wise choices made by an 
-    informed public.
+    We envision a future where whenever you hear about the LHC, autism, Bitcoin, or any of the other complexities of the modern world, you will think, “I can learn that!” We think a world where deep understanding is at your fingertips will be less confusing, more interesting, and blessed with wise choices made by an informed public.
 
     So how the heck do you expect to achieve this?
 
-    All the information is already out there. Professors have spent countless hours 
-    crafting high-quality courses and textbooks that present the ideas and information 
-    in a precise but accessible manner. Much of this content is even freely available."
+    All the information is already out there. Professors have spent countless hours crafting high-quality courses and textbooks that present the ideas and information in a precise but accessible manner. Much of this content is even freely available."
 		
 		—From Metacademy.org/about
 
-MetaSyllabus takes ten thousand real university course syllabuses and, using text analysis 
-by AlchemyAPI, extracts the concepts those courses discuss. That information is used to 
-build a network of concepts, each annotated with descriptions sourced from Wikipedia.
+MetaSyllabus takes ten thousand real university course syllabuses and, using text analysis by AlchemyAPI, extracts the concepts those courses discuss. That information is used to build a network of concepts, each annotated with descriptions sourced from Wikipedia.
 
-Many thanks to AlchemyAPI for saving me from trying to build a natural language processor,
-as well as Stanford University, the University of Toronto, and the University of Waterloo 
-for the use of their data.
-
------------------------------------------------------------------------------------------
-Projects and code that uses Microsoft Public License:
-NodeXL
-WPFExtensions
-Extended WPF Toolkit
-Quickgraph
-
-Projects and code that uses Apache 2.0 license:
-Graph#
-GraphX
-
-Projects and code that uses The MIT License:
-YAXLib
-
-Json.NET License:
-Copyright (c) 2007 James Newton-King
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this
-software and associated documentation files (the "Software"), to deal in the Software
-without restriction, including without limitation the rights to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to the following
-conditions:
-
-The above copyright notice and this permission notice shall be included in all copies
-or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
-CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
-OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
------------------------------------------------------------------------------------------
+Many thanks to AlchemyAPI for saving me from trying to build a natural language processor, as well as Stanford University, the University of Toronto, and the University of Waterloo for the use of their data.
