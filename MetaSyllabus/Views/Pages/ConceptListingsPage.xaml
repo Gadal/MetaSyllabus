@@ -1,0 +1,135 @@
+﻿<Page x:Class="MetaSyllabus.Pages.ConceptListingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="clr-namespace:MetaSyllabus.ViewModels"
+      xmlns:v="clr-namespace:MetaSyllabus.Views"
+      xmlns:gx="clr-namespace:GraphX.Controls;assembly=GraphX.Controls"
+      xmlns:g="clr-namespace:MetaSyllabus.Graphing"
+      xmlns:conv="clr-namespace:MetaSyllabus.Converters"
+      Title="Concepts"
+      KeepAlive="True"
+      Background="#0094E4">
+
+    <!--   
+         _____________________
+        |       |             |
+        |       |             |
+        |   1   |      2      |
+        |       |             |
+        |_______|_____________|
+        |                     |
+        |    3                |
+        |_____________________|
+        
+        1: Concept list
+        2: Selected concept's summary
+        3: Concept dependency graph
+        
+    -->
+
+    <Page.Resources>
+        <conv:ViewModelToVertexConverter x:Key="ViewModelToVertexConverter" />
+    </Page.Resources>
+
+    <Grid Margin="5,5,5,5">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" MinHeight="300"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="3*" MinHeight="100"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*" MinWidth="200"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="13*" MinWidth="400"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 1. Concept List -->
+            <v:AutoScrollListView Grid.Column="0"
+                                  x:Name="ConceptListing"
+                                  DockPanel.Dock="Right"
+                                  ItemsSource="{Binding ConceptViewModels}"
+                                  IsSynchronizedWithCurrentItem="True"
+                                  SelectionMode="Single"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                  SelectedItem="{Binding SelectedConcept,
+                                                         Mode=TwoWay}">
+                <v:AutoScrollListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Concept Name"
+                                        DisplayMemberBinding="{Binding Name}"
+                                        v:SortableGridView.PropertyName="Name"
+                                        Width="{Binding ActualWidth, 
+                                                        ElementName=AutoWidth}"/>
+                    </GridView>
+                </v:AutoScrollListView.View>
+
+                <v:AutoScrollListView.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Property="IsSelected"
+                                Value="{Binding IsSelected,
+                                                Mode=TwoWay}"/>
+                    </Style>
+                </v:AutoScrollListView.ItemContainerStyle>
+
+            </v:AutoScrollListView>
+
+            <!-- This is a helper that allows us to set the width of the above listview to *. -->
+            <Grid Visibility="Hidden">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0"
+                      x:Name="AutoWidth"/>
+            </Grid>
+
+            <GridSplitter Grid.Column="1"
+                          Width="4"
+                          HorizontalAlignment="Center"
+                          Margin="0,2,0,2"
+                          VerticalAlignment="Stretch"
+                          ResizeBehavior="PreviousAndNext"
+                          ResizeDirection="Columns"
+                          Background="#008CDC"/>
+
+            <!-- 2. Selected Concept's Summary -->
+            <ScrollViewer Grid.Column="2"
+                          Background="White"
+                          Padding="20,20,20,0">
+                <vm:BindableTextBlock DataContext="{Binding SelectedConcept}"
+                                      BindableInlines="{Binding RichText}"
+                                      TextWrapping="Wrap"/>
+            </ScrollViewer>
+            
+        </Grid>
+
+        <GridSplitter Height="4"
+                      Grid.Row="1"
+                      HorizontalAlignment="Stretch"
+                      Margin="2,0,2,0"
+                      VerticalAlignment="Center"
+                      ResizeBehavior="PreviousAndNext"
+                      ResizeDirection="Rows"
+                      Background="#008CDC"/>
+
+        <!-- 3. Concept Dependency Graph -->
+        <gx:ZoomControl Grid.Row="2"
+                        x:Name="gx_ZoomControl"
+                        MinZoom=".8"
+                        MaxZoom="1.4"
+                        UseAbsoluteZoomOnMouseWheel="True">
+            
+            <g:ConceptGraphArea SelectedVertex="{Binding SelectedConcept,
+                                                         Converter={StaticResource ViewModelToVertexConverter},
+                                                         Mode=TwoWay}"/>
+        </gx:ZoomControl>
+        
+    </Grid>
+
+</Page>

@@ -1,0 +1,125 @@
+﻿<Page x:Class="MetaSyllabus.Pages.BeginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="clr-namespace:MetaSyllabus.ViewModels"
+      xmlns:a="clr-namespace:MetaSyllabus.Animations"
+	  Title="Home"
+      Background="#008CDC"
+      FocusManager.FocusedElement="{Binding ElementName=SearchBox}"
+      KeepAlive="True">
+
+    <!--
+        
+         _____________________
+        |     :         :     |
+        |     :         :     |
+        |     :    1    :     |
+        |     :         :     |
+        |     :    2    :     |
+        |     :    3    :     |
+        |_____:_________:_____|
+    
+    1: Logo
+    2: Search bar
+    3: Link to about page
+        
+    -->
+    
+    <StackPanel Width="550"
+                Background="#0094E4"
+                VerticalAlignment="Stretch">
+        
+        <a:PetersenGraphAnimation ScalingFactor="350"
+                                  AnimationDuration="3.6"
+                                  EdgeThickness="5"
+                                  EdgeColour="White"
+                                  HorizontalAlignment="Center"
+                                  Margin="0,60,0,20"/>
+        
+        <TextBlock Text="MetaSyllabus"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   FontStretch="SemiExpanded"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   Margin="0,0,0,10"/>
+                   
+        <TextBlock Text="What would you like to learn about?"
+                   FontSize="18"
+                   FontWeight="SemiBold"
+                   Foreground="White"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,20"/>
+        
+        <DockPanel Height="40"
+                   Width="350">
+            
+            <TextBox x:Name="SearchBox"
+                     Width="300"
+                     Padding="50,0,0,0"
+                     HorizontalAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     AcceptsReturn="False"
+                     FontWeight="Thin"
+                     FontSize="20"
+                     Text="{Binding SearchString,
+                                    Mode=TwoWay,
+                                    UpdateSourceTrigger=PropertyChanged}">
+
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding SearchAndNavCommand}"
+                                CommandParameter="Views/Pages/SearchPage.xaml"
+                                Key="Return"/>
+                </TextBox.InputBindings>
+            
+            </TextBox>
+            
+            <Button Content="Search"
+                    Command="{Binding SearchAndNavCommand}"
+                    CommandParameter="Views/Pages/SearchPage.xaml"
+                    Width="50"/>
+            
+        </DockPanel>
+
+        <Button Content="What is this?"
+                FontWeight="SemiBold"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Width="130" 
+                Height="35"
+                BorderBrush="#008CDC" 
+                BorderThickness="5"
+                Foreground="White" 
+                Margin="0,50,0,0"
+                Command="{Binding NavToPageCommand}"
+                CommandParameter="Views/Pages/AboutPage.xaml">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="#008CDC"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="4">
+                                    <ContentPresenter HorizontalAlignment="Center" 
+                                                      VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#0094E4"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        
+    </StackPanel>
+    
+</Page>

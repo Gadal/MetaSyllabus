@@ -1,0 +1,192 @@
+﻿<Page x:Class="MetaSyllabus.Pages.SearchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:vm="clr-namespace:MetaSyllabus.ViewModels"
+      xmlns:v="clr-namespace:MetaSyllabus.Views"
+      xmlns:conv="clr-namespace:MetaSyllabus.Converters"
+      Title="Search Results"
+      FocusManager.FocusedElement="{Binding ElementName=SearchBox}"
+      KeepAlive="True"
+      Background="#0094E4">
+    
+    <!--
+        
+         _____________________
+        |__1______________|_2_|
+        |              |      |
+        |  3           |  4   |
+        |              |      |
+        |              |      |
+        |              |      |
+        |______________|______|
+    
+    1: Search bar
+    2: Search button
+    3: Course search results
+    4: Concept search results
+        
+    -->
+    
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <DockPanel Grid.Row="0"
+                   Margin="5,5,5,5">
+
+            <!-- 2. Search Button (Comes first because of DockPanel.Dock behaviour) -->
+            <Button Width="50"
+                    DockPanel.Dock="Right"
+                    HorizontalContentAlignment="Center"
+                    Command="{Binding SearchCommand}"
+                    Content="Search"/>
+
+            <!-- 1. Search Box -->
+            <TextBox x:Name="SearchBox"
+                     VerticalContentAlignment="Center"
+                     FontWeight="Thin"
+                     FontSize="20"
+                     AcceptsReturn="False"
+                     Text="{Binding SearchString,
+                                    UpdateSourceTrigger=PropertyChanged}"
+                     Padding="5,0,0,0">
+                
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding SearchCommand, 
+                                                  Mode=TwoWay}"
+                                Key="Return"/>
+                </TextBox.InputBindings>
+                
+            </TextBox>
+
+        </DockPanel>
+
+        <Grid Grid.Row="1"
+              Margin="5,0,5,5">
+
+            <Grid.Resources>
+                
+                <DataTemplate DataType="{x:Type vm:CourseViewModel}">
+                    <TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+
+                <DataTemplate DataType="{x:Type vm:ConceptViewModel}">
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+
+            </Grid.Resources>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 3. Course Search Results -->
+            <v:AutoScrollListView Grid.Column="0"
+                                  x:Name="CourseListView"
+                                  DockPanel.Dock="Left"
+                                  ItemsSource="{Binding CourseSearchResults}"
+                                  SelectedItem="{Binding SelectedCourse,
+                                                         Mode=TwoWay}"
+                                  SelectionMode="Single"
+                                  v:SortableGridView.AutoSort="True"
+                                  v:SortableGridView.ShowSortGlyph="True"
+                                  AlternationCount="2">
+
+                <v:AutoScrollListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Course Title"
+                                        DisplayMemberBinding="{Binding Title}"
+                                        v:SortableGridView.PropertyName="Title"/>
+                        <GridViewColumn Header="Department"
+                                        DisplayMemberBinding="{Binding DepartmentName}"
+                                        v:SortableGridView.PropertyName="DepartmentName"/>
+                        <GridViewColumn Header="Faculty"
+                                        DisplayMemberBinding="{Binding FacultyName}"
+                                        v:SortableGridView.PropertyName="FacultyName"/>
+                        <GridViewColumn Header="Institution"
+                                        DisplayMemberBinding="{Binding InstitutionName}"
+                                        v:SortableGridView.PropertyName="InstitutionName"/>
+                    </GridView>
+                </v:AutoScrollListView.View>
+
+                <v:AutoScrollListView.ItemContainerStyle>
+
+                    <Style TargetType="{x:Type ListViewItem}">
+                        <Setter Property="IsSelected"
+                                Value="{Binding IsSelected,
+                                                Mode=TwoWay}"/>
+                        <EventSetter Event="MouseDoubleClick" 
+                                     Handler="NavToCourseListings"/>
+                        <EventSetter Event="PreviewKeyDown"
+                                     Handler="NavToCourseListings"/>
+                    </Style>
+                    
+                </v:AutoScrollListView.ItemContainerStyle>
+                
+            </v:AutoScrollListView>
+
+            <GridSplitter Grid.Column="1"
+                          Width="4"
+                          VerticalAlignment="Stretch"
+                          Margin="2,0,2,0"
+                          HorizontalAlignment="Center"
+                          ResizeBehavior="PreviousAndNext"
+                          ResizeDirection="Columns"
+                          Background="#008CDC"/>
+            
+            <!-- 4. Concept Search Results -->
+            <Grid Grid.Column="2">
+
+                <v:AutoScrollListView x:Name="ConceptListView"
+                                      DockPanel.Dock="Right"
+                                      ItemsSource="{Binding ConceptSearchResults}"
+                                      SelectedItem="{Binding SelectedConcept}"
+                                      SelectionMode="Single"
+                                      ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                      v:SortableGridView.AutoSort="True"      
+                                      v:SortableGridView.ShowSortGlyph="True">
+                    
+                    <v:AutoScrollListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Concept Name"
+                                            DisplayMemberBinding="{Binding Name}"
+                                            v:SortableGridView.PropertyName="Name"
+                                            Width="{Binding ActualWidth,
+                                                            ElementName=AutoWidth}"/>
+                        </GridView>
+                    </v:AutoScrollListView.View>
+
+                    <v:AutoScrollListView.ItemContainerStyle>
+                        <Style TargetType="{x:Type ListViewItem}">
+                            <Setter Property="IsSelected"
+                                    Value="{Binding IsSelected,
+                                                    Mode=TwoWay}"/>
+                            <EventSetter Event="MouseDoubleClick" 
+                                         Handler="NavToConceptListings"/>
+                            <EventSetter Event="PreviewKeyDown"
+                                         Handler="NavToConceptListings"/>
+                        </Style>
+                    </v:AutoScrollListView.ItemContainerStyle>
+
+                </v:AutoScrollListView>
+
+                <!-- This is a helper that allows us to resize the above listview dynamically. -->
+                <Grid Visibility="Hidden">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0"
+                          x:Name="AutoWidth"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

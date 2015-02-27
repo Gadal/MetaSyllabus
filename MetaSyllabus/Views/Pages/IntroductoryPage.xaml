@@ -1,0 +1,39 @@
+﻿<Page x:Class="MetaSyllabus.Pages.IntroductoryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:vm="clr-namespace:MetaSyllabus.ViewModels"
+      xmlns:local="clr-namespace:MetaSyllabus"
+	  Title="IntroductoryPage"
+      Background="#008CDC"
+      KeepAlive="True">
+
+    <ScrollViewer>
+
+        <StackPanel VerticalAlignment="Stretch"
+                Width="550"
+                Background="#0094E4">
+
+            <TextBlock FontSize="22"
+                   FontWeight="Bold"
+                   FontStretch="SemiExpanded"
+                   Foreground="White">
+            <TextBlock>About</TextBlock>
+        </TextBlock>
+
+            <TextBlock FontSize="18"
+                   FontWeight="SemiBold"
+                   Foreground="White">
+            <TextBlock>I built this as a research tool.  </TextBlock>
+        </TextBlock>
+
+
+
+
+
+        </StackPanel>
+
+    </ScrollViewer>
+    
+</Page>
