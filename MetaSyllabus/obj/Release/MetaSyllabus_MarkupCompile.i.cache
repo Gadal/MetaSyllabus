@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Clockwork Soul\Documents\Visual Studio 2013\Projects\MetaSyllabus\MetaSyllabus\obj\Release\
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Release\
 MetaSyllabus
 none
 false
 TRACE
-C:\Users\Clockwork Soul\Documents\Visual Studio 2013\Projects\MetaSyllabus\MetaSyllabus\App.xaml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\App.xaml
 61865411821
 
 40162578875
-191875210725
+19-5720320
 MainWindow.xaml;Views\Pages\AboutPage.xaml;Views\Pages\BeginPage.xaml;Views\Pages\ConceptListingsPage.xaml;Views\Pages\CourseListingsPage.xaml;Views\Pages\SearchPage.xaml;
 
-False
+True
 

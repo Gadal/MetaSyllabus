@@ -1,1 +1,6 @@
 *.pdb
+MetaSyllabus.v12.suo
+*.lref
+*.cache
+MetaSyllabus/obj/Debug/MetaSyllabus_MarkupCompile.lref
+*.Cache

@@ -43,7 +43,7 @@ namespace MetaSyllabus.Graphing
 
             if (SelectedVertex != null)
             {
-                SelectedVertex.Edges.OrderByDescending(x => x.Weight);
+                List<Edge<T>> sorted = SelectedVertex.Edges.OrderByDescending(x => x.Weight).ToList();
 
                 HashSet<Vertex<T>> seenVertices = new HashSet<Vertex<T>>();
                 seenVertices.Add(SelectedVertex);
@@ -51,9 +51,9 @@ namespace MetaSyllabus.Graphing
                 List<Edge<T>> edges = new List<Edge<T>>();
 
                 // Get incident edges
-                for (int i = 0; i < SelectedVertex.Edges.Count; i++)
+                for (int i = 0; i < sorted.Count; i++)
                 {
-                    Edge<T> edge = SelectedVertex.Edges.ElementAt(i);
+                    Edge<T> edge = sorted.ElementAt(i);
 
                     if (edge.Source == SelectedVertex || seenVertices.Contains(edge.Source)) { continue; }
 
@@ -66,9 +66,9 @@ namespace MetaSyllabus.Graphing
                 int incidentEdgeCount = edges.Count;
 
                 // Get outgoing edges
-                for (int i = 0; i < SelectedVertex.Edges.Count; i++)
+                for (int i = 0; i < sorted.Count; i++)
                 {
-                    Edge<T> edge = SelectedVertex.Edges.ElementAt(i);
+                    Edge<T> edge = sorted.ElementAt(i);
 
                     if (edge.Target == SelectedVertex || seenVertices.Contains(edge.Target)) { continue; }
 

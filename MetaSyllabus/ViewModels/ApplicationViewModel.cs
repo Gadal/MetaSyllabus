@@ -202,7 +202,7 @@ namespace MetaSyllabus.ViewModels
             ConceptViewModels = new ObservableCollection<ConceptViewModel>(conceptViewModels);
 
             // Sort the course tree then rerun the most recent search
-            CourseTree.OrderByDescending(x => x.Name);
+            CourseTree = new ObservableCollection<Institution>(CourseTree.OrderByDescending(x => x.Name));
             foreach(Institution institution in CourseTree)
             {
                 institution.Sort();

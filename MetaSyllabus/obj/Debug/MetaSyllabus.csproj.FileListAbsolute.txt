@@ -42,3 +42,47 @@ C:\Users\Clockwork Soul\Documents\Visual Studio 2013\Projects\MetaSyllabus\MetaS
 C:\Users\Clockwork Soul\Documents\Visual Studio 2013\Projects\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.csproj.GenerateResource.Cache
 C:\Users\Clockwork Soul\Documents\Visual Studio 2013\Projects\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.exe
 C:\Users\Clockwork Soul\Documents\Visual Studio 2013\Projects\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.pdb
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\MetaSyllabus.exe.config
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.exe
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.pdb
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\MetaSyllabus.exe
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\MetaSyllabus.pdb
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\GraphX.Common.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\GraphX.Controls.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\GraphX.Logic.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\QuickGraph.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\YAXLib.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\de\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\en\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\es\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\it\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.csprojResolveAssemblyReference.cache
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MainWindow.baml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MainWindow.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\AboutPage.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\BeginPage.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\ConceptListingsPage.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\CourseListingsPage.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\SearchPage.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\App.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus_MarkupCompile.cache
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus_MarkupCompile.lref
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\AboutPage.baml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\BeginPage.baml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\ConceptListingsPage.baml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\CourseListingsPage.baml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\Views\Pages\SearchPage.baml
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.g.resources
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.Properties.Resources.resources
+C:\Users\Clockwork Soul\Documents\GitHub\MetaSyllabus\MetaSyllabus\obj\Debug\MetaSyllabus.csproj.GenerateResource.Cache
