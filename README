@@ -15,3 +15,5 @@ MetaSyllabus is an attempt to supplement the work of Roger Grosse and Colorado R
 MetaSyllabus takes ten thousand real university course syllabuses and, using text analysis by AlchemyAPI, extracts the concepts those courses discuss. That information is used to build a network of concepts, each annotated with descriptions sourced from Wikipedia.
 
 Many thanks to AlchemyAPI for saving me from trying to build a natural language processor, as well as Stanford University, the University of Toronto, and the University of Waterloo for the use of their data.
+
+See also: https://codepen.io/DustinGadal/pen/gbWxwB
